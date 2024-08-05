@@ -1,0 +1,20 @@
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;   /* Center buttons horizontally */
+    gap: 1rem; 
+  }
+  
+  button.signup-button { /* Target only signup buttons */
+    padding: 0.8rem 1.5rem;
+    background-color: #98C48C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button.signup-button.selected {
+    background-color: #66a351; 
+  }
+  
