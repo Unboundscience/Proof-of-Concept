@@ -1,0 +1,23 @@
+/* Navbar.css */
+.navbar {
+    width: 250px; /* Wider sidebar */
+    background-color: #0033CC;
+    padding: 20px;
+    margin-right: 20px; /* Add space between sidebar and content */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    margin-bottom: 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  

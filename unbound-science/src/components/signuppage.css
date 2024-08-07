@@ -1,20 +1,33 @@
-.button-container {
+.landing-page {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  .landing-page h1 { /* Style for main heading */
+    color: #121D6B;
+    text-align: center;
+  }
+  
+  .signup-buttons {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center;   /* Center buttons horizontally */
-    gap: 1rem; 
+    justify-content: space-around; /* Equally spaced buttons */
+    margin-top: 40px;
   }
   
-  button.signup-button { /* Target only signup buttons */
-    padding: 0.8rem 1.5rem;
+  .signup-buttons button { /* Different button styling */
     background-color: #98C48C;
-    color: white;
+    color: #04060D;
     border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 250px; /* Make buttons wider */
+    text-align: left;
+    font-size: 18px; /* Larger font */
   }
   
-  button.signup-button.selected {
-    background-color: #66a351; 
+  .signup-buttons ul { /* For bullet points */
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px; /* Adjust as needed */
   }
-  

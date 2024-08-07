@@ -1,10 +1,13 @@
 import React from 'react';
-
+import './Header.css'; 
 function Header() {
   return (
     <header className="header">
-      <img src="your-logo.png" alt="Logo" className="logo" />
-      <input type="text" placeholder="Search..." className="search-bar" />
+      <div className="logo">Logo</div>
+      <div className="search-bar">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <button className="signup-button">Sign Up</button>
     </header>
   );
 }
