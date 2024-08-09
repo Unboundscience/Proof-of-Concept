@@ -1,13 +1,14 @@
 import React from 'react';
 import './Navbar.css'; // Create a separate CSS file for Navbar styling
 
-function Navbar() {
+function Navbar({ onNavigate }) {
   return (
     <nav className="navbar">
       <ul>
-        <li><a href="#link1">Link 1</a></li>
-        <li><a href="#link2">Link 2</a></li>
-        <li><a href="#link3">Link 3</a></li>
+        <li onClick={() => onNavigate('signup')}>Home</li> 
+        <li onClick={() => onNavigate('scientist')}>Scientist Page</li>
+        <li onClick={() => onNavigate('donor')}>Donor Page</li>
+        <li onClick={() => onNavigate('community')}>Community Page</li>
       </ul>
     </nav>
   );

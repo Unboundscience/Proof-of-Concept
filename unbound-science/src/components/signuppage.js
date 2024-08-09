@@ -1,19 +1,19 @@
 import React from 'react';
 import './signuppage.css';
 
-function SignUpPage() {
 
-
+function SignUpPage({ onNavigate }) { // Receive onNavigate prop
   return (
     <div className="landing-page">
-      {/* Your landing page content here (e.g., text, images) */}
+      {/* Your landing page content here */}
       <div className="signup-buttons">
-          <button className="scientist-button">Scientist</button>
-          <button className="donor-button">Donor</button>
-          <button className="community-button">Community</button>
+        <button className="scientist-button" onClick={() => onNavigate('scientist')}>Scientist</button>
+        <button className="donor-button" onClick={() => onNavigate('donor')}>Donor</button>
+        <button className="community-button" onClick={() => onNavigate('community')}>Community</button>
       </div>
     </div>
   );
 }
+
 
 export default SignUpPage;
