@@ -1,0 +1,31 @@
+.community-page {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for the community page buttons */
+  .community-page-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+  }
+  
+  .community-page-buttons button {
+    background: linear-gradient(to bottom, #98C48C, #B2D6A5);
+    color: #04060D;
+    border: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: calc(33.33% - 40px); /* 3 buttons per row with spacing */
+    height: 150px;  /* Adjust height as needed */
+    text-align: center;
+    font-size: 18px; 
+  }

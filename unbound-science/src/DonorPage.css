@@ -31,14 +31,14 @@
   }
   
   /* Style for the other buttons */
-  .category-buttons {
+  .donor-category-buttons {
     display: flex;
     flex-wrap: wrap; /* Allow buttons to wrap onto multiple lines */
     justify-content: center; 
     gap: 20px; /* Adjust spacing between buttons */
   }
   
-  .category-buttons button {
+  .donor-category-buttons button {
     background: linear-gradient(to bottom, #98C48C, #B2D6A5);
     color: #04060D;
     border: none;

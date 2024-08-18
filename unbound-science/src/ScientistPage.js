@@ -1,15 +1,19 @@
 import React from 'react';
+import './ScientistPage.css'
 
 
 function ScientistPage() {
 
     return (
-        <div className="landing-page">
-          {/* Your landing page content here */}
+        <div className='scientist-page'>
+          <div className='scientist-header'>
+            Scientist Studio
+          </div>
+          
           <div className="signup-buttons">
-            <button className="scientist-button">My Projects</button>
-            <button className="donor-button">My Sectors</button>
-            <button className="community-button">My Reviews</button>
+            <button className="scientist-page-button">My Projects</button>
+            <button className="scientist-page-button">My Sectors</button>
+            <button className="scientist-page-button">My Reviews</button>
           </div>
         </div>
       );
