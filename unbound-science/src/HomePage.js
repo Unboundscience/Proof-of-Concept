@@ -1,30 +1,30 @@
 import React from 'react';
-
+import './HomePage.css';
 
 function HomePage() {
 
     return (
         <div className="landing-page">
           {/* Your landing page content here */}
-          <div className="signup-buttons">
-            <button className="scientist-button">All</button>
-            <button className="donor-button">Top</button>
-            <button className="community-button">Trending</button>
-            <button className="community-button">Energy</button>
-            <button className="community-button">Natural Sciences</button>
-            <button className="community-button">Pollution</button>
-            <button className="community-button">Quantum</button>
-            <button className="community-button">Current Season</button>
-            <button className="community-button">Previous Season</button>
-            <button className="community-button">Record Breakers</button>
+          <div className="category-buttons">
+            <button className="category-buttons">All</button>
+            <button className="category-buttons">Top</button>
+            <button className="category-buttons">Trending</button>
+            <button className="category-buttons">Energy</button>
+            <button className="category-buttons">Natural Sciences</button>
+            <button className="category-buttons">Pollution</button>
+            <button className="category-buttons">Quantum</button>
+            <button className="category-buttons">Current Season</button>
+            <button className="category-buttons">Previous Season</button>
+            <button className="category-buttons">Record Breakers</button>
 
           </div>
 
-          <div>
-            <button>Video Thumbnail</button>
-            <button>Video Thumbnail</button>
-            <button>Video Thumbnail</button>
-            <button>Video Thumbnail</button>
+          <div className='video-thumbnails'>
+            <button className="video-thumbnails">Video Thumbnail</button>
+            <button className='video-thumbnails'>Video Thumbnail</button>
+            <button className='video-thumbnails'>Video Thumbnail</button>
+            <button className='video-thumbnails'>Video Thumbnail</button>
           </div>
         </div>
       );

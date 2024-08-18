@@ -1,23 +1,23 @@
 import React from 'react';
+import './DonorPage.css'
 
 
 function DonorPage() {
 
     return (
-        <div className="landing-page">
-          {/* Your landing page content here */}
-          <div>
-          <button className="scientist-button">Make Donation</button>
+        <div className='donor-page'>
+          <div className='make-donation-button'>
+          <button className="make-donation-button">Make Donation</button>
           </div>
-          <div className="signup-buttons">
-            <button className="scientist-button">Donation History</button>
-            <button className="donor-button">Community Proposals</button>
-            <button className="community-button">Referrals</button>
-            <button className="community-button">Scientific Peer Review</button>
-            <button className="community-button">Voting History</button>
-            <button className="community-button">Foundation Proposals</button>
-            <button className="community-button">Favorites</button>
-            <button className="community-button">Live Chat</button>
+          <div className="category-buttons">
+            <button className="category-buttons">Donation History</button>
+            <button className="category-buttons">Community Proposals</button>
+            <button className="category-buttons">Referrals</button>
+            <button className="category-buttons">Scientific Peer Review</button>
+            <button className="category-buttons">Voting History</button>
+            <button className="category-buttons">Foundation Proposals</button>
+            <button className="category-buttons">Favorites</button>
+            <button className="category-buttons">Live Chat</button>
 
           </div>
         </div>

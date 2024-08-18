@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column; /* Stack header and main content vertically */
   min-height: 100vh;
+  width: 99%;
 }
 
 .container {
@@ -10,8 +11,3 @@
   flex: 1;
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  width: 100%; /* Make header take full width */
-}

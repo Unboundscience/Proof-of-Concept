@@ -1,0 +1,70 @@
+/* HomePage.css */
+
+.landing-page {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style for category buttons */
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-top: 40px;
+    gap: 10px;
+}
+
+
+.category-buttons button {
+    background: linear-gradient(to bottom, #98C48C, #B2D6A5);
+    color: #04060D;
+    border: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    padding: 2px; 
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px; /* Add margin for spacing */
+    flex: 0 0 calc(25% - 20px); /* Adjust width as needed, ensuring space for margins */
+    text-align: center;
+    width: calc(20% - 20px); /* Adjust width to fit more buttons per row */
+    height: 20px; 
+    font-size: 14px; /* Slightly smaller font */
+}
+
+/* Style for video thumbnails (assuming they are buttons) */
+.video-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.video-thumbnails button {
+    /* Style these buttons to represent video thumbnails */
+    width: 350px; /* Adjust as needed */
+    height: 250px; /* Adjust as needed */
+    background-color: #ccc; /* Placeholder background */
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) { 
+    .category-buttons button {
+        width: calc(33.33% - 20px); /* 3 buttons per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) { 
+    .category-buttons button {
+        width: calc(50% - 20px); /* 2 buttons per row on even smaller screens */
+    }
+}

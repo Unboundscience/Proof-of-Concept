@@ -1,9 +1,14 @@
 /* Navbar.css */
 .navbar {
     width: 250px; /* Wider sidebar */
+    color: #FFFFFF;
+    text-decoration: none;
     background-color: #0033CC;
     padding: 20px;
     margin-right: 20px; /* Add space between sidebar and content */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: 500; /* Slightly bolder */
+    letter-spacing: 0.5px; /* Add subtle letter spacing */
   }
   
   .navbar ul {
@@ -15,9 +20,18 @@
   .navbar li {
     margin-bottom: 10px;
   }
+
+  .navbar li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+  }
   
   .navbar a {
     color: white;
     text-decoration: none;
+  }
+
+  .navbar .active { /* Style the active link */
+    font-weight: bold;
+    text-decoration: underline;
   }
   
