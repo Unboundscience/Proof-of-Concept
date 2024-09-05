@@ -19,7 +19,7 @@ function SignUpPage({ onNavigate }) { // Receive onNavigate prop
         <button className="donor-button" onClick={() => onNavigate('donor')}>Donor</button>
         <button className="community-button" onClick={() => onNavigate('community')}>Community</button>
       </div>
-      {showScientistForm && <ScientistSignupForm />}
+      {showScientistForm && <ScientistSignupForm onNavigate={onNavigate} />}
     </div>
   );
 }

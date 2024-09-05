@@ -1,23 +1,54 @@
 import React, { useState } from 'react';
 import './ScientistSignupForm.css'; // Create a corresponding CSS file
 
-function ScientistSignupForm() {
+function ScientistSignupForm({ onNavigate }) {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
+    username: '',
+    contact: '',
+    blockchain: '',
+    storage: '',
+    sectors: [],
+    funding: [],
     notifications: [],
     // Add other form fields as needed (e.g., institution, research areas, etc.)
   });
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+    const { name, value, checked, type } = event.target;
+  
+    setFormData(prevFormData => {
+      if (name === 'notifications') {
+        // Handle notifications array
+        if (checked) {
+          return { ...prevFormData, notifications: [...prevFormData.notifications, value] };
+        } else {
+          return {
+            ...prevFormData,
+            notifications: prevFormData.notifications.filter(item => item !== value)
+          };
+        }
+      } else if (name.startsWith('sector-')) {
+        // Handle sectors array
+        if (checked) {
+          return { ...prevFormData, sectors: [...prevFormData.sectors, value] };
+        } else {
+          return {
+            ...prevFormData,
+            sectors: prevFormData.sectors.filter(item => item !== value)
+          };
+        }
+      } else {
+        // Handle other inputs
+        return { ...prevFormData, [name]: value };
+      }
+    });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission here (e.g., send data to server, validate, etc.)
     console.log(formData); // For now, just log the form data
+    onNavigate('scientist');
   };
 
   return (
@@ -28,14 +59,13 @@ function ScientistSignupForm() {
           <label htmlFor="username">Username:</label>
           <input 
             type="text" 
-            id="fullName" 
-            name="fullName" 
-            value={formData.fullName} 
+            id="username"   
+            name="username" 
+            value={formData.username} 
             onChange={handleChange} 
             required 
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="contact">Contact Info:</label>
           <input 
@@ -64,44 +94,43 @@ function ScientistSignupForm() {
                 
             </select>
         </div>
-
         <div className="form-group">
             <label htmlFor="storage">Decentralized Storage:</label>
             <select 
                 id="storage" 
                 name="storage" 
-                value={formData.blockchain}
+                value={formData.storage} // Bind to formData.storage
                 onChange={handleChange} 
                 required 
             >
                 <option value="">Pick A Decentralized Storage Container to Save Your Precious Work -- Forever</option>
                 <option value="ipfs">IPFS</option>
                 <option value="icp-storage">Internet Computer</option>
-                <option value="arweave">Arweave</option>
-                
+                <option value="arweave">Arweave</option>                
             </select>
         </div>
+
 
         <div className="form-group">
             <label>Which Sectors Will You Create In?</label>
             <div>
                 <label>
-                <input 
-                    type="radio" 
-                    name="sectors" 
-                    value="energy"
-                    checked={formData.sectors === 'energy'} // Check if 'energy' is selected
-                    onChange={handleChange} 
-                /> Energy
-                </label>
+                    <input 
+                        type="checkbox" 
+                        name="sector-energy" 
+                        value="energy"
+                        checked={formData.sectors.includes('energy')} 
+                        onChange={handleChange} 
+                    /> Energy
+            </label>
             </div>
             <div>
                 <label>
                 <input 
-                    type="radio" 
-                    name="sectors" 
+                    type="checkbox" 
+                    name="sector-natural-sciences" 
                     value="natural-sciences"
-                    checked={formData.sectors === 'natural-sciences'} 
+                    checked={formData.sectors.includes('natural-sciences')} 
                     onChange={handleChange} 
                 /> Natural Sciences
                 </label>
@@ -109,10 +138,10 @@ function ScientistSignupForm() {
             <div>
                 <label>
                 <input 
-                    type="radio" 
-                    name="sectors" 
+                    type="checkbox" 
+                    name="sector-pollution" 
                     value="pollution"
-                    checked={formData.sectors === 'pollution'} 
+                    checked={formData.sectors.includes('pollution')} 
                     onChange={handleChange} 
                 /> Pollution
                 </label>
@@ -120,29 +149,27 @@ function ScientistSignupForm() {
             <div>
                 <label>
                 <input 
-                    type="radio" 
-                    name="sectors" 
-                    value="quantum"
-                    checked={formData.sectors === 'quantum'} 
-                    onChange={handleChange} 
+                     type="checkbox" 
+                     name="sector-quantum" 
+                     value="quantum"
+                     checked={formData.sectors.includes('quantum')} 
+                     onChange={handleChange} 
                 /> Quantum
                 </label>
             </div>
         </div>
-
         <div className="form-group">
             <label htmlFor="funding">Do You Need Funding?</label>
             <select 
                 id="funding" 
                 name="funding" 
-                value={formData.blockchain}
+                value={formData.funding} // Bind to formData.funding
                 onChange={handleChange} 
                 required 
             >
                 <option value="">Do you need funding?</option>
                 <option value="yes">Yes (enables voting on your work, invites for new seasons)</option>
-                <option value="no">No (disables voting, invites, you can still vote for others regardless)</option>
-                
+                <option value="no">No (disables voting, invites, you can still vote for others regardless)</option>                
             </select>
         </div>
 
