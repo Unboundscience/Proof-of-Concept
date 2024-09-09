@@ -1,0 +1,30 @@
+.project-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap onto new lines if needed */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Add some space between the buttons */
+  }
+  
+  .project-thumbnail {
+    background-color: #f0f0f0; /* Light gray background */
+    border: none;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Smooth transitions on hover */
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    text-align: center;
+    font-size: 18px;
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column; 
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally   
+   */
+  }
+  
+  .project-thumbnail:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+  }
