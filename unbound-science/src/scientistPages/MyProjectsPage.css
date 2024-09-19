@@ -1,0 +1,12 @@
+/* ScientistMyProjects.css */
+
+.project-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap onto new lines if needed */
+    justify-content: center; 
+    gap: 20px; 
+  }
+  
+  .project-thumbnail {
+    flex: 0 0 calc(33.33% - 20px); /* 3 buttons per row with spacing */
+  }

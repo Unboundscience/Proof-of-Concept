@@ -8,6 +8,7 @@ import SignUpPage from './components/signuppage';
 import DonorPage from './DonorPage';
 import HomePage from './HomePage';
 import ScientistMyProjectsPage from './ScientistMyProjects';
+import MyProjectsPage from './scientistPages/MyProjectsPage';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         {currentPage === 'donor' && <DonorPage  onNavigate={navigateTo} />}
         {currentPage === 'community' && <CommunityPage onNavigate={navigateTo} />}
         {currentPage === 'my-projects' && <ScientistMyProjectsPage onNavigate={navigateTo} />}
+        {currentPage === 'projects' && <MyProjectsPage onNavigate={navigateTo} />}
       </div>
     </div>
   );

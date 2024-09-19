@@ -3,8 +3,11 @@ import './ScientistPage.css';
 import './ScientistMyProjects.css';
 
 
-function ScientistMyProjectsPage() {
+function ScientistMyProjectsPage({ onNavigate }) { // Receive onNavigate prop
 
+  const handleCreateNewProjectClick = () => {
+      onNavigate('projects');
+  };
     return (
         <div className='scientist-page'>
           <div className='scientist-header'>
@@ -12,7 +15,9 @@ function ScientistMyProjectsPage() {
           </div>
           
           <div className="signup-buttons">
-            <button className="scientist-page-button">Create New Project</button>
+          <button className="scientist-page-button" onClick={handleCreateNewProjectClick}>
+                    Create New Project
+                </button>
           </div>
           <br />
           <div className='project-section'> 
